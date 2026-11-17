@@ -22,3 +22,7 @@ SAFETY & LIMITATIONS:
 - SYN/SYN-ACK/ACK is an educational metaphor. This app does not implement TCP handshakes itself.
 - Browser requests and standard hosting logs may be handled by the hosting provider.
 - Netlify free plans have platform limits; this package does not require Netlify's paid AI agent.
+
+UPDATE: Biblical Wisdom lesson added for natural-language questions about where to read in the Bible for wisdom. Includes BLUE/GREEN/GOLD/PURPLE and references.
+
+Four-level display policy: BLUE, GREEN, GOLD (Now I Get It!), and PURPLE appear for matched and unmatched questions. Unmatched questions receive transparent guidance, not invented answers. Keep this behavior in future updates.
