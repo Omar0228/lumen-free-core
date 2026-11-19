@@ -3,21 +3,65 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#10271e">
-<meta name="description" content="Lumen Free Core — Scripture-centered, four-level guided learning.">
+<meta name="description" content="Lumen Free Core — free, Scripture-guided learning, networking, and interactive knowledge.">
 <title>Lumen Free Core | Everybody Gets the Key</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-additions.css">
+<style>
+  .codex-card {
+    border: 1px solid #668878;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 16px 0;
+  }
+  .codex-card h3 { margin-top: 0; }
+  .codex-modes, .codex-answers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0;
+  }
+  .codex-modes button,
+  .codex-answers button {
+    flex: 1 1 160px;
+  }
+  .codex-modes button[aria-pressed="true"] {
+    outline: 3px solid #8fd6ae;
+    outline-offset: 2px;
+  }
+  .codex-diagram {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .codex-node {
+    border: 2px solid #719987;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+  .codex-node strong { display: block; }
+  .codex-feedback {
+    padding: 12px;
+    margin: 12px 0;
+    border-left: 4px solid #80b99b;
+  }
+  .codex-progress { font-weight: bold; }
+  .codex-card textarea { width: 100%; box-sizing: border-box; }
+</style>
 </head>
 <body>
 
 <header class="top">
 <div class="brand">✦ LUMEN <span>FREE CORE</span></div>
-<nav>
+<nav aria-label="Main navigation">
 <a href="#learn">Ask Lumen</a>
 <a href="#roads">Seven Roads</a>
 <a href="#damascus">Damascus</a>
+<a href="#codex">Legacy Codex</a>
 <a href="#ai">AI Options</a>
 <a href="#chain">Sovereign Chain</a>
 <a href="#library">Lessons</a>
@@ -38,7 +82,6 @@
 <section id="learn" class="panel">
 <p class="eyebrow">LUMEN FREE CORE · UNIFIED ASK & LEARN</p>
 <h2>What would you like to understand?</h2>
-
 <p>One question box. Reviewed lessons first. Optional experimental AI only when you choose it.</p>
 
 <label for="question">Your question</label>
@@ -61,7 +104,6 @@
 <div id="response" class="response" aria-live="polite">
 <p>Choose a sample or enter your question. Available reviewed lessons are taught at four levels: BLUE, GREEN, GOLD, and PURPLE.</p>
 </div>
-
 </section>
 
 <section id="roads" class="panel">
@@ -78,14 +120,122 @@
 <div id="damascus-story"></div>
 </section>
 
+<section id="codex" class="panel">
+<p class="eyebrow">THE LUMEN LEGACY CODEX</p>
+<h2>The Living Book of Knowledge</h2>
+<p>Discover. Understand. Practice. Verify. Create. Share.</p>
+<p>Every learner deserves access to knowledge. The Legacy Codex is a growing, free learning library. Progress comes from practice and evidence, not from simply opening a book.</p>
+
+<div class="codex-card">
+<h3>The Seven Gates of the Legacy Codex</h3>
+<ol>
+<li>Discover the Book</li>
+<li>Receive the Key</li>
+<li>Awaken Understanding</li>
+<li>Enter the Forge</li>
+<li>Face the Trial</li>
+<li>Forge Your Own Knowledge</li>
+<li>Pass the Key</li>
+</ol>
+</div>
+
+<div class="codex-card">
+<h3>The Library</h3>
+<p><strong>Available now:</strong> Book of Networking.</p>
+<p><strong>Planned books:</strong> Cybersecurity, Hardware, Software, Mathematics, Biblical Wisdom, Creation and Discovery.</p>
+<p class="muted small">Planned books are not presented as completed lessons.</p>
+</div>
+
+<div class="codex-card">
+<p class="eyebrow">BOOK OF NETWORKING · CHAPTER 1</p>
+<h3>The Divided Kingdom — What Is a VLAN?</h3>
+<p>A VLAN, or Virtual Local Area Network, divides a switched network into separate logical Layer 2 broadcast domains.</p>
+<p>Devices in different VLANs generally need a router or Layer 3 switch to communicate. Routing must be configured, and security policies must permit the traffic.</p>
+
+<h3>Gate 2 — Choose Your Learning Key</h3>
+<div class="codex-modes" role="group" aria-label="Choose explanation level">
+<button type="button" data-codex-mode="blue" aria-pressed="true">🔵 BLUE</button>
+<button type="button" data-codex-mode="green" aria-pressed="false">🟢 GREEN</button>
+<button type="button" data-codex-mode="gold" aria-pressed="false">🟡 GOLD</button>
+<button type="button" data-codex-mode="purple" aria-pressed="false">🟣 PURPLE</button>
+</div>
+
+<div id="codex-explanation" class="response" aria-live="polite">
+<strong>BLUE — Explain Like I'm Five</strong>
+<p>Imagine a school with two groups of classrooms. Even though everyone uses the same hallway, the school can separate which groups receive each other's announcements. VLANs help a network make groups like that.</p>
+</div>
+
+<h3>Gate 3 — See the Network</h3>
+<p>Example: four computers connected to one Layer 2 switch.</p>
+<div class="codex-diagram" aria-label="Four computers grouped into two VLANs on one switch">
+<div class="codex-node">
+<strong>PC1</strong>
+VLAN 10<br>192.168.10.10
+</div>
+<div class="codex-node">
+<strong>PC2</strong>
+VLAN 10<br>192.168.10.20
+</div>
+<div class="codex-node">
+<strong>PC3</strong>
+VLAN 20<br>192.168.20.10
+</div>
+<div class="codex-node">
+<strong>PC4</strong>
+VLAN 20<br>192.168.20.20
+</div>
+</div>
+<p><strong>Shared switch:</strong> All four PCs connect to one physical switch, but VLAN 10 and VLAN 20 are separate broadcast domains.</p>
+<p><strong>Without inter-VLAN routing:</strong> PC1 and PC2 can communicate within VLAN 10 when configured correctly. PC3 and PC4 can communicate within VLAN 20. PC1 cannot directly reach PC3 through this Layer 2 switch alone.</p>
+<p class="muted small">Diagram is conceptual. Actual communication also depends on cabling, interface status, addressing, host firewalls, and configuration. VLANs alone are not a complete security solution.</p>
+
+<h3>Gate 4 — Enter the Forge</h3>
+<p>Imagine PC1 sends an ARP broadcast in VLAN 10. Should the switch forward that broadcast to ordinary access ports in VLAN 20?</p>
+<div class="codex-answers">
+<button type="button" id="codex-forge-no">No</button>
+<button type="button" id="codex-forge-yes">Yes</button>
+</div>
+<p id="codex-forge-feedback" class="codex-feedback" aria-live="polite">Choose an answer to practice.</p>
+
+<h3>Gate 5 — Face the Trial</h3>
+<p class="codex-progress" id="codex-progress">Question 1 of 3</p>
+<p id="codex-question">What does a VLAN primarily separate?</p>
+<div id="codex-options" class="codex-answers"></div>
+<p id="codex-quiz-feedback" class="codex-feedback" aria-live="polite">Choose an answer.</p>
+<button type="button" id="codex-next" disabled>Next question</button>
+<button type="button" id="codex-retry" class="secondary">Restart trial</button>
+
+<h3>Changed-Scenario Challenge</h3>
+<p>Now imagine VLAN 10 and VLAN 20 are connected to a router with correctly configured interfaces and routes. A firewall rule permits PC1 to reach PC3. Can communication between those VLANs now be possible?</p>
+<div class="codex-answers">
+<button type="button" id="codex-scenario-yes">Yes</button>
+<button type="button" id="codex-scenario-no">No</button>
+</div>
+<p id="codex-scenario-feedback" class="codex-feedback" aria-live="polite">Choose an answer.</p>
+
+<h3>Gate 6 — Forge Your Own Knowledge</h3>
+<label for="codex-teachback">Explain VLANs in your own words</label>
+<textarea id="codex-teachback" rows="4" placeholder="Explain what a VLAN does, what a switch does, and when routing is needed."></textarea>
+<button type="button" id="codex-review">Review my explanation</button>
+<p id="codex-teachback-feedback" class="codex-feedback" aria-live="polite">Your explanation stays on this page. Feedback is a writing prompt, not automatic technical grading.</p>
+
+<h3>Gate 7 — Pass the Key</h3>
+<p>Share what you learned with someone else. Teach them why two VLANs on one switch are not automatically one network.</p>
+<button type="button" id="codex-export">Download my learning summary</button>
+
+<details>
+<summary>Optional Biblical Reflection</summary>
+<p>Proverbs 4:7 encourages the pursuit of wisdom. Consider how understanding, patience, and responsible teaching can help others learn.</p>
+<p>This reflection is optional. Scripture is not offered as technical evidence for VLAN behavior.</p>
+</details>
+</div>
+</section>
+
 <section id="ai" class="panel">
 <p class="eyebrow">OPTIONAL · EXPERIMENTAL LOCAL AI</p>
 <h2>Ask Lumen beyond the reviewed library</h2>
-
 <p>Ask your question in the single Ask Lumen box above. If you choose to load local AI on a compatible device, you can request an experimental answer to that same question.</p>
-
 <p>This optional AI uses WebGPU and may require a large model download, substantial memory, and a compatible browser. It has no paid inference API. Its answers are not reviewed and may contain errors. Small models will not match ChatGPT's capabilities.</p>
-
 <a href="#learn">Return to the Ask Lumen question box</a>
 
 <div class="controls">
@@ -93,13 +243,10 @@
 <button id="ai-ask" type="button" disabled>Ask experimental AI using my question</button>
 <button id="ai-clear" type="button" class="secondary">Clear AI conversation</button>
 </div>
-
 <p id="ai-status" role="status" aria-live="polite">AI not loaded. The reviewed lesson library works without it.</p>
-
 <div id="ai-output" class="response" aria-live="polite">
 Experimental AI has not been loaded. Review generated answers independently, including Scripture references.
 </div>
-
 </section>
 
 <section id="chain" class="panel">
@@ -136,6 +283,234 @@ Experimental AI has not been loaded. Review generated answers independently, inc
 <script src="app.js"></script>
 <script src="roads.js"></script>
 <script type="module" src="ai.js"></script>
+
+<script>
+(() => {
+  'use strict';
+
+  const $ = id => document.getElementById(id);
+
+  const explanations = {
+    blue: {
+      title: "BLUE — Explain Like I'm Five",
+      text: "Imagine a school with two groups of classrooms. Even though everyone uses the same hallway, the school can separate which groups receive each other's announcements. VLANs help a network make groups like that."
+    },
+    green: {
+      title: "GREEN — A Child Explaining to Their Parent",
+      text: "Mom, a VLAN is like giving different classrooms their own announcement groups. The classrooms can share the same building and hallway, but their local announcements stay within their own groups. To send messages between groups, we need another way to connect them."
+    },
+    gold: {
+      title: "GOLD — Kingdom Analogy",
+      text: "Four royal guardhouses share one castle courtyard, represented by a switch. Two guardhouses belong to the Blue Banner, VLAN 10, and two to the Green Banner, VLAN 20. The courtyard gatekeeper keeps their local announcements separate. A royal gateway, represented by a router or Layer 3 switch, is needed for communication between the banners."
+    },
+    purple: {
+      title: "PURPLE — Tech + Family",
+      text: "A VLAN creates a separate Layer 2 broadcast domain. Think of two family group chats: people can use the same phone network but keep group conversations separate. A router or Layer 3 switch can provide communication between VLANs when correctly configured and permitted by security policy."
+    }
+  };
+
+  function showMode(mode) {
+    const item = explanations[mode];
+    if (!item) return;
+
+    const panel = $('codex-explanation');
+    panel.replaceChildren();
+
+    const heading = document.createElement('strong');
+    heading.textContent = item.title;
+
+    const paragraph = document.createElement('p');
+    paragraph.textContent = item.text;
+
+    panel.append(heading, paragraph);
+
+    document.querySelectorAll('[data-codex-mode]').forEach(button => {
+      button.setAttribute(
+        'aria-pressed',
+        String(button.dataset.codexMode === mode)
+      );
+    });
+  }
+
+  document.querySelectorAll('[data-codex-mode]').forEach(button => {
+    button.addEventListener('click', () => {
+      showMode(button.dataset.codexMode);
+    });
+  });
+
+  $('codex-forge-no').addEventListener('click', () => {
+    $('codex-forge-feedback').textContent =
+      'Correct. An ordinary Layer 2 switch keeps an ARP broadcast inside its VLAN. It does not forward that broadcast to access ports in another VLAN.';
+  });
+
+  $('codex-forge-yes').addEventListener('click', () => {
+    $('codex-forge-feedback').textContent =
+      'Not quite. VLAN 10 and VLAN 20 are separate Layer 2 broadcast domains. Try again.';
+  });
+
+  const questions = [
+    {
+      question: 'What does a VLAN primarily separate?',
+      options: [
+        'Layer 2 broadcast domains',
+        'Power outlets',
+        'Physical computer screens'
+      ],
+      correct: 0,
+      explanation: 'A VLAN logically separates Layer 2 broadcast domains on switched networks.'
+    },
+    {
+      question: 'PC1 and PC3 are in different VLANs on a Layer 2 switch. What is generally needed for them to communicate?',
+      options: [
+        'Only a longer Ethernet cable',
+        'Inter-VLAN routing using a router or Layer 3 switch',
+        'A different keyboard'
+      ],
+      correct: 1,
+      explanation: 'Communication between different VLANs generally requires Layer 3 routing, correct configuration, and permitted traffic.'
+    },
+    {
+      question: 'Which statement about VLAN security is accurate?',
+      options: [
+        'A VLAN automatically replaces all firewalls',
+        'Every VLAN can always communicate with every other VLAN',
+        'VLANs provide segmentation but are not a complete security solution'
+      ],
+      correct: 2,
+      explanation: 'VLANs provide network segmentation. Security still requires appropriate controls, configuration, and policies.'
+    }
+  ];
+
+  let index = 0;
+  let score = 0;
+  let answered = false;
+
+  function renderQuestion() {
+    const item = questions[index];
+    answered = false;
+
+    $('codex-progress').textContent =
+      `Question ${index + 1} of ${questions.length} · Score ${score}`;
+
+    $('codex-question').textContent = item.question;
+    $('codex-quiz-feedback').textContent = 'Choose an answer.';
+    $('codex-next').disabled = true;
+
+    const options = $('codex-options');
+    options.replaceChildren();
+
+    item.options.forEach((answer, answerIndex) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = answer;
+
+      button.addEventListener('click', () => {
+        if (answered) return;
+        answered = true;
+
+        const correct = answerIndex === item.correct;
+        if (correct) score++;
+
+        $('codex-quiz-feedback').textContent =
+          (correct ? 'Correct. ' : 'Not quite. ') +
+          item.explanation;
+
+        options.querySelectorAll('button').forEach(b => {
+          b.disabled = true;
+        });
+
+        $('codex-next').disabled = false;
+        $('codex-next').textContent =
+          index === questions.length - 1
+            ? 'See trial results'
+            : 'Next question';
+      });
+
+      options.appendChild(button);
+    });
+  }
+
+  $('codex-next').addEventListener('click', () => {
+    if (!answered) return;
+
+    if (index < questions.length - 1) {
+      index++;
+      renderQuestion();
+      return;
+    }
+
+    $('codex-progress').textContent =
+      `Trial complete · ${score} of ${questions.length} correct`;
+
+    $('codex-question').textContent =
+      'Review your explanations, try the changed scenario, or restart the trial.';
+
+    $('codex-options').replaceChildren();
+    $('codex-quiz-feedback').textContent =
+      'A quiz score shows performance on these three questions, not complete mastery of VLANs.';
+
+    $('codex-next').disabled = true;
+  });
+
+  $('codex-retry').addEventListener('click', () => {
+    index = 0;
+    score = 0;
+    renderQuestion();
+  });
+
+  $('codex-scenario-yes').addEventListener('click', () => {
+    $('codex-scenario-feedback').textContent =
+      'Correct. Inter-VLAN routing can enable communication between VLANs when addressing, routing, interfaces, and security policies are configured correctly.';
+  });
+
+  $('codex-scenario-no').addEventListener('click', () => {
+    $('codex-scenario-feedback').textContent =
+      'Try again. A router or Layer 3 switch can route traffic between VLANs when correctly configured and permitted.';
+  });
+
+  $('codex-review').addEventListener('click', () => {
+    const answer = $('codex-teachback').value.trim();
+
+    $('codex-teachback-feedback').textContent =
+      answer.length < 20
+        ? 'Write at least one complete sentence explaining how VLANs separate devices.'
+        : 'Now compare your explanation with the chapter: Did you describe separate Layer 2 broadcast domains, same-VLAN communication, and the need for routing between VLANs? This is a self-review prompt, not an automatic correctness grade.';
+  });
+
+  $('codex-export').addEventListener('click', () => {
+    const summary = [
+      'LUMEN LEGACY CODEX',
+      'Book of Networking — Chapter 1: What Is a VLAN?',
+      '',
+      'A VLAN logically separates Layer 2 broadcast domains.',
+      'Different VLANs generally require Layer 3 routing to communicate.',
+      'VLANs are not a complete security solution.',
+      '',
+      `Trial score so far: ${score} of ${questions.length}`,
+      '',
+      'My teach-back:',
+      $('codex-teachback').value.trim() || '(Not entered)',
+      '',
+      'Learning summary is educational, not a certification.'
+    ].join('\n');
+
+    const blob = new Blob([summary], {
+      type: 'text/plain;charset=utf-8'
+    });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+
+    link.href = url;
+    link.download = 'lumen-legacy-codex-vlan-chapter-1.txt';
+    link.click();
+
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  renderQuestion();
+})();
+</script>
 
 </body>
 </html>
