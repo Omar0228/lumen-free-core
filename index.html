@@ -1,1 +1,110 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10271e"><meta name="description" content="Lumen Free Core — Scripture-centered, four-level guided learning."><title>Lumen Free Core | Everybody Gets the Key</title><link rel="stylesheet" href="styles.css"></head><body><header class="top"><div class="brand">✦ LUMEN <span>FREE CORE</span></div><nav><a href="#learn">Ask Lumen</a><a href="#roads">Seven Roads</a><a href="#damascus">Damascus</a><a href="#ai">Local AI</a><a href="#chain">Sovereign Chain</a><a href="#library">Lessons</a><a href="#privacy">Privacy</a></nav></header><main><section class="hero"><p class="eyebrow">THE SOVEREIGN LEARNING COMPANION</p><h1>Everybody gets the key.</h1><p>Ask. Understand. Practice. Pass it on.</p><p class="muted">Illuminate the road. Deliver the message. Develop understanding. Walk with compassion. Pass the light.</p><a class="cta" href="#learn">Start learning ↓</a></section><section id="learn" class="panel"><p class="eyebrow">LUMEN FREE CORE · ASK & LEARN</p><h2>What would you like to understand?</h2><label for="question">Your question</label><textarea id="question" rows="3" placeholder="Ask about Proverbs, trusting God, VLANs, DNS, or learning…"></textarea><div class="controls"><button id="ask">Ask Lumen →</button><button id="clear" class="secondary">Clear</button></div><p class="muted small">Try a sample question:</p><div class="chips"><button class="sample" data-q="What does Proverbs 3:5-6 teach about trusting God?">Trusting God</button><button class="sample" data-q="What is a VLAN and can VLAN 10 talk to VLAN 20?">VLANs</button><button class="sample" data-q="What is DNS?">DNS</button><button class="sample" data-q="How can I build a daily study habit?">Study habits</button><button class="sample" data-q="What is the parable of the sower?">Parable of the Sower</button></div><div id="response" class="response" aria-live="polite"><p>Choose a sample or enter your question. Supported lessons will be taught at four levels.</p></div></section><section id="roads" class="panel"><p class="eyebrow">THE SEVEN LAYERS: FROM THE ROAD TO UNDERSTANDING</p><h2>Seven layers. Seven gates. One illuminated journey.</h2><p>Learn real networking concepts, explore Acts 9 as a clearly labeled metaphor, and practice in four learning modes.</p><div id="roads-app"></div></section><section id="damascus" class="panel"><p class="eyebrow">ROAD TO DAMASCUS</p><h2>Saul's journey · Acts 9:1–19</h2><p>This educational summary follows the biblical account; it is not a quotation or dramatized dialogue. Disability is not a sign of moral failure.</p><div id="damascus-story"></div></section><section id="ai" class="panel"><p class="eyebrow">EXPERIMENTAL · LOCAL AI</p><h2>Ask beyond the library</h2><p>This optional AI runs in a compatible browser using WebGPU. It has no paid inference API, but needs a model download, memory, and device support. Answers are not verified and may contain errors. Small models will not match ChatGPT's capabilities.</p><button id="ai-load" type="button">Load free local AI</button><p id="ai-status" role="status" aria-live="polite">AI not loaded. The reviewed lesson library works without it.</p><label for="ai-question">Ask local AI (follow-up questions supported)</label><textarea id="ai-question" rows="3" placeholder="What does the Bible say about oversharing?"></textarea><div class="controls"><button id="ai-ask" type="button" disabled>Ask local AI</button><button id="ai-clear" type="button" class="secondary">Clear AI conversation</button></div><div id="ai-output" class="response" aria-live="polite">Load the model to begin. For Scripture, check all passages in a trusted Bible.</div></section><section id="chain" class="panel"><p class="eyebrow">THE SOVEREIGN CHAIN</p><h2>How your question travels</h2><ol class="steps"><li><strong>SYN — Receive:</strong> Lumen receives your question.</li><li><strong>SYN-ACK — Route:</strong> Match the question to a reviewed lesson and identify its topic.</li><li><strong>Scripture Wall:</strong> Attach a relevant Bible reference, distinguished from technical evidence.</li><li><strong>Verify:</strong> Explain only what the reviewed lesson supports; mark gaps clearly.</li><li><strong>ACK — Return:</strong> Present BLUE, GREEN, GOLD, PURPLE and a teach-back challenge.</li></ol><p class="muted small">SYN/SYN-ACK/ACK is a teaching analogy inspired by TCP's three-way handshake. The separate experimental AI area is not a verified lesson.</p></section><section id="library" class="panel"><p class="eyebrow">CURATED KNOWLEDGE</p><h2>Available lessons</h2><div id="catalog" class="catalog"></div><p class="muted small">Human-authored educational summaries. Read biblical passages in full context. Existing lessons remain in lessons.js.</p></section><section id="privacy" class="panel"><h2>Privacy and family sharing</h2><p>Reviewed lesson questions are processed in your browser. Optional local AI inference is intended to run on your device; loading the model and JavaScript may contact external hosting providers, which may keep access logs. This prototype has no account or server-side conversation storage. Avoid entering sensitive information. Browser caching and device behavior vary.</p><button id="export" class="secondary">Download my current reviewed answer</button></section></main><footer>✦ LUMEN · Everybody gets the key · Free Core family pilot · Independent educational project</footer><script src="lessons.js"></script><script src="app.js"></script><script src="roads.js"></script><script type="module" src="ai.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10271e">
+<meta name="description" content="Lumen Free Core — Scripture-centered, four-level guided learning.">
+<title>Lumen Free Core | Everybody Gets the Key</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-additions.css">
+</head>
+<body>
+<header class="top">
+<div class="brand">✦ LUMEN <span>FREE CORE</span></div>
+<nav>
+<a href="#learn">Ask Lumen</a>
+<a href="#roads">Seven Roads</a>
+<a href="#damascus">Damascus</a>
+<a href="#ai">Local AI</a>
+<a href="#chain">Sovereign Chain</a>
+<a href="#library">Lessons</a>
+<a href="#privacy">Privacy</a>
+</nav>
+</header>
+<main>
+<section class="hero">
+<p class="eyebrow">THE SOVEREIGN LEARNING COMPANION</p>
+<h1>Everybody gets the key.</h1>
+<p>Ask. Understand. Practice. Pass it on.</p>
+<p class="muted">Illuminate the road. Deliver the message. Develop understanding. Walk with compassion. Pass the light.</p>
+<a class="cta" href="#learn">Start learning ↓</a>
+</section>
+<section id="learn" class="panel">
+<p class="eyebrow">LUMEN FREE CORE · ASK & LEARN</p>
+<h2>What would you like to understand?</h2>
+<label for="question">Your question</label>
+<textarea id="question" rows="3" placeholder="Ask about Proverbs, trusting God, VLANs, DNS, or learning…"></textarea>
+<div class="controls">
+<button id="ask">Ask Lumen →</button>
+<button id="clear" class="secondary">Clear</button>
+</div>
+<p class="muted small">Try a sample question:</p>
+<div class="chips">
+<button class="sample" data-q="What does Proverbs 3:5-6 teach about trusting God?">Trusting God</button>
+<button class="sample" data-q="What is a VLAN and can VLAN 10 talk to VLAN 20?">VLANs</button>
+<button class="sample" data-q="What is DNS?">DNS</button>
+<button class="sample" data-q="How can I build a daily study habit?">Study habits</button>
+<button class="sample" data-q="What is the parable of the sower?">Parable of the Sower</button>
+</div>
+<div id="response" class="response" aria-live="polite">
+<p>Choose a sample or enter your question. Supported lessons will be taught at four levels.</p>
+</div>
+</section>
+<section id="roads" class="panel">
+<p class="eyebrow">THE SEVEN LAYERS: FROM THE ROAD TO UNDERSTANDING</p>
+<h2>Seven layers. Seven gates. One illuminated journey.</h2>
+<p>Learn real networking concepts, explore Acts 9 as a clearly labeled metaphor, and practice in four learning modes.</p>
+<div id="roads-app"></div>
+</section>
+<section id="damascus" class="panel">
+<p class="eyebrow">ROAD TO DAMASCUS</p>
+<h2>Saul's journey · Acts 9:1–19</h2>
+<p>This educational summary follows the biblical account; it is not a quotation or dramatized dialogue. Disability is not a sign of moral failure.</p>
+<div id="damascus-story"></div>
+</section>
+<section id="ai" class="panel">
+<p class="eyebrow">EXPERIMENTAL · LOCAL AI</p>
+<h2>Ask beyond the library</h2>
+<p>This optional AI runs in a compatible browser using WebGPU. It has no paid inference API, but needs a model download, memory, and device support. Answers are not verified and may contain errors. Small models will not match ChatGPT's capabilities.</p>
+<button id="ai-load" type="button">Load free local AI</button>
+<p id="ai-status" role="status" aria-live="polite">AI not loaded. The reviewed lesson library works without it.</p>
+<label for="ai-question">Ask local AI (follow-up questions supported)</label>
+<textarea id="ai-question" rows="3" placeholder="What does the Bible say about oversharing?"></textarea>
+<div class="controls">
+<button id="ai-ask" type="button" disabled>Ask local AI</button>
+<button id="ai-clear" type="button" class="secondary">Clear AI conversation</button>
+</div>
+<div id="ai-output" class="response" aria-live="polite">Load the model to begin. For Scripture, check all passages in a trusted Bible.</div>
+</section>
+<section id="chain" class="panel">
+<p class="eyebrow">THE SOVEREIGN CHAIN</p>
+<h2>How your question travels</h2>
+<ol class="steps">
+<li><strong>SYN — Receive:</strong> Lumen receives your question.</li>
+<li><strong>SYN-ACK — Route:</strong> Match the question to a reviewed lesson and identify its topic.</li>
+<li><strong>Scripture Wall:</strong> Attach a relevant Bible reference, distinguished from technical evidence.</li>
+<li><strong>Verify:</strong> Explain only what the reviewed lesson supports; mark gaps clearly.</li>
+<li><strong>ACK — Return:</strong> Present BLUE, GREEN, GOLD, PURPLE and a teach-back challenge.</li>
+</ol>
+<p class="muted small">SYN/SYN-ACK/ACK is a teaching analogy inspired by TCP's three-way handshake. The separate experimental AI area is not a verified lesson.</p>
+</section>
+<section id="library" class="panel">
+<p class="eyebrow">CURATED KNOWLEDGE</p>
+<h2>Available lessons</h2>
+<div id="catalog" class="catalog"></div>
+<p class="muted small">Human-authored educational summaries. Read biblical passages in full context. Existing lessons remain in lessons.js.</p>
+</section>
+<section id="privacy" class="panel">
+<h2>Privacy and family sharing</h2>
+<p>Reviewed lesson questions are processed in your browser. Optional local AI inference is intended to run on your device; loading the model and JavaScript may contact external hosting providers, which may keep access logs. This prototype has no account or server-side conversation storage. Avoid entering sensitive information. Browser caching and device behavior vary.</p>
+<button id="export" class="secondary">Download my current reviewed answer</button>
+</section>
+</main>
+<footer>✦ LUMEN · Everybody gets the key · Free Core family pilot · Independent educational project</footer>
+<script src="lessons.js"></script>
+<script src="app.js"></script>
+<script src="roads.js"></script>
+<script type="module" src="ai.js"></script>
+</body>
+</html>
